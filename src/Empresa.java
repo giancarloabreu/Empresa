@@ -33,6 +33,7 @@ public class Empresa {
         return contador;
     }
 
+
     public boolean verificarFuncionario(String nomeFuncionario) {
         for (int i = 0; i < funcionarios.length; i++){
             if (funcionarios[i] != null && funcionarios[i]==(nomeFuncionario)) {
