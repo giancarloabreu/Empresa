@@ -15,8 +15,10 @@ public class Empresa {
     public void imprimirFuncionarios() {
         System.out.println("Empresa: " + nome);
         for (int i = 0; i < funcionarios.length; i++){
+            if (funcionarios[i]==null){
+                break;
+            }
             System.out.println("Funcionario " + (i+1) + ": "+ funcionarios[i]);
-
         }
     }
 
@@ -24,13 +26,16 @@ public class Empresa {
         int contador = 0;
         for (int i = 0; i < funcionarios.length; i++){
             contador ++;
+            if (funcionarios[i]==null){
+                contador --;
+            }
         }
         return contador;
     }
 
     public boolean verificarFuncionario(String nomeFuncionario) {
         for (int i = 0; i < funcionarios.length; i++){
-            if (funcionarios[i] != null & funcionarios[i]==(nomeFuncionario)) {
+            if (funcionarios[i] != null && funcionarios[i]==(nomeFuncionario)) {
                 return true;
             }
         }
